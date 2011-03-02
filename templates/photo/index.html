@@ -1,0 +1,9 @@
+{% if last_photo_list %}
+    <ul>
+    {% for photo in last_photo_list %}
+        <li><a href="/photos/{{ photo.id }}/"><img src="{{ photo.url }}"/></a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>Nenhuma foto encontrada.</p>
+{% endif %}

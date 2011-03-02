@@ -5,7 +5,7 @@ from django.conf.urls.defaults import *
 # admin.autodiscover()
 
 urlpatterns = patterns('',
-    (r'^photos/', 'photo.views.index'),
+    (r'^photos/$', 'photo.views.index'),
     (r'^photos/(?P<photo_id>\d+)/$', 'photo.views.show'),
     (r'^photos/(?P<photo_id>\d+)/results$', 'photo.views.results'),
     (r'^photos/(?P<photo_id>\d+)/vote$', 'photo.views.vote'),
