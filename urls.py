@@ -10,6 +10,7 @@ urlpatterns = patterns('',
     (r'^photos/(?P<photo_id>\d+)/results$', 'photo.views.results'),
     (r'^photos/(?P<photo_id>\d+)/vote$', 'photo.views.vote'),
     (r'^ranking/', 'photo.views.ranking'),
+    (r'^twitter/', include('twitter_app.urls')),
     # Example:
     # (r'^projetox/', include('projetox.foo.urls')),
 
