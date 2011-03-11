@@ -82,3 +82,15 @@ def update_status(consumer, connection, access_token, status):
                                            http_method='POST')
     json = fetch_response(oauth_request, connection)
     return json
+
+def search(consumer, connection, access_token, query):
+	"""Faz um busca no Twitter"""
+    oauth_request = request_oauth_resource(consumer,
+                                           TWITTER_SEARCH,
+                                           access_token,
+                                           {'query': query},
+                                           http_method='POST')
+	json = ferch_response(oauth_request, connection)
+	return json
+
+
